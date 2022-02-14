@@ -10,6 +10,7 @@ const project = new typescript.TypeScriptProject({
   peerDeps: ['projen'],
   deps: ['@graphql-codegen/plugin-helpers', 'graphql'],
   depsUpgrade: false,
+  releaseToNpm: true,
 });
 
 project.synth();
