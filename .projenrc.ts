@@ -1,12 +1,15 @@
-import { cdk } from 'projen';
+import { typescript } from 'projen';
 
-const project = new cdk.JsiiProject({
-  author: 'Roman Filippov',
-  authorAddress: 'rf@romanfilippov.com',
-  defaultReleaseBranch: 'main',
+const project = new typescript.TypeScriptProject({
+  defaultReleaseBranch: 'master',
+  authorName: 'Roman Filippov',
+  authorEmail: 'rf@romanfilippov.com',
+  repository: 'https://github.com/moltar/projen-graphql-codegen.git',
   name: 'projen-graphql-codegen',
   projenrcTs: true,
-  repositoryUrl: 'https://github.com/rf/projen-graphql-codegen.git',
+  peerDeps: ['projen'],
+  deps: ['@graphql-codegen/plugin-helpers', 'graphql'],
+  depsUpgrade: false,
 });
 
 project.synth();

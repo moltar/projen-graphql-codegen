@@ -1,0 +1,7 @@
+type Foo {
+  id: Int!
+}
+
+type Query {
+  foo: [Foo]
+}
