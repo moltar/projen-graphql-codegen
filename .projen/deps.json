@@ -81,6 +81,7 @@
     },
     {
       "name": "graphql",
+      "version": "16.2.0",
       "type": "runtime"
     }
   ],

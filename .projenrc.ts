@@ -8,7 +8,12 @@ const project = new typescript.TypeScriptProject({
   name: 'projen-graphql-codegen',
   projenrcTs: true,
   peerDeps: ['projen'],
-  deps: ['@graphql-codegen/plugin-helpers', 'graphql'],
+  deps: [
+    '@graphql-codegen/plugin-helpers',
+    // lowers and pins the version to mitigate
+    // https://github.com/dotansimha/graphql-code-generator/issues/7519
+    'graphql@16.2.0',
+  ],
   depsUpgrade: false,
   releaseToNpm: true,
 });
