@@ -1,6 +1,6 @@
-import assert from 'assert';
-import path from 'path';
-import type { Types } from '@graphql-codegen/plugin-helpers';
+import * as assert from 'assert';
+import * as path from 'path';
+import type { Types } from '@graphql-codegen/plugin-helpers/types';
 import { typescript, YamlFile, SampleFile, TextFile } from 'projen';
 import { PLUGINS } from './plugins';
 
