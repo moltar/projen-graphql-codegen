@@ -5,29 +5,29 @@
 ## Usage
 
 ```ts
-  const projen = new ProjenGraphQLCodegenProject({
-    // ... required projen options
+const projen = new ProjenGraphQLCodegenProject({
+  // ... required projen options
 
-    // projen-graphql-codegen options
-    schema: 'my-schema.graphql',
-    eslintGraphQLConfig: 'schema-recommended',
-    generators: {
-      './src/types.ts': {
-        plugins: ['typescript'],
-        config: {
-          avoidOptionals: true,
-        },
+  // projen-graphql-codegen options
+  schema: 'my-schema.graphql',
+  eslintGraphQLConfig: 'schema-recommended',
+  generators: {
+    './src/types.ts': {
+      plugins: ['typescript'],
+      config: {
+        avoidOptionals: true,
       },
     },
-  });
+  },
+});
 
-  // add more generators later
-  projen.addGenerator('./src/foo.ts', {
-    plugins: ['typescript'],
-  })
+// add more generators later
+projen.addGenerator('./src/foo.ts', {
+  plugins: ['typescript'],
+})
 
-  // finally synth the project
-  projen.synth()
+// finally synth the project
+projen.synth()
 ```
 
 Then:
