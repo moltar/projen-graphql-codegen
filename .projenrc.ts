@@ -1,7 +1,7 @@
 import { typescript } from 'projen';
 
 const project = new typescript.TypeScriptProject({
-  defaultReleaseBranch: 'master',
+  defaultReleaseBranch: 'main',
   authorName: 'Roman Filippov',
   authorEmail: 'rf@romanfilippov.com',
   repository: 'https://github.com/moltar/projen-graphql-codegen.git',
